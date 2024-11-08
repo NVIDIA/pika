@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-123
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+  nodeSelector:
+    kubernetes.io/hostname: nd-zrsjc6s-bs-qtfcxo9170041-1b.nd-zrsjc6s.nvmetal.net

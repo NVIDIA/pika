@@ -1,0 +1,20 @@
+# permissions for end users to view notifymaintenances.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: notifymaintenance-viewer-role
+rules:
+- apiGroups:
+  - ngn2.nvidia.com
+  resources:
+  - notifymaintenances
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - ngn2.nvidia.com
+  resources:
+  - notifymaintenances/status
+  verbs:
+  - get

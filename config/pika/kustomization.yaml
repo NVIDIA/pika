@@ -1,0 +1,13 @@
+resources:
+- pika.yaml
+
+patchesStrategicMerge:
+- manager_auth_proxy_patch.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+configMapGenerator:
+- name: pika-config
+  files:
+  - pika-config.yaml

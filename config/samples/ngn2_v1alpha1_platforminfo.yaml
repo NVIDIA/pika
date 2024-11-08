@@ -1,0 +1,18 @@
+apiVersion: ngn2.nvidia.com/v1alpha1
+kind: PlatformInfo
+metadata:
+  labels:
+    app.kubernetes.io/name: platforminfo
+    app.kubernetes.io/instance: platforminfo-sample
+    app.kubernetes.io/part-of: pika
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: pika
+  name: platforminfo-sample
+spec:
+  versions:
+    kubernetes: v1.26
+    nvp: v1234
+    vbios: v5678
+status:
+  maintenanceState: inProgress
+  

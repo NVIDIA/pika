@@ -1,0 +1,26 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  name: validating-webhook-configuration
+webhooks:
+- admissionReviewVersions:
+  - v1
+  clientConfig:
+    service:
+      name: webhook-service
+      namespace: system
+      path: /validate-ngn2-nvidia-com-v1alpha1-notifymaintenance
+  failurePolicy: Fail
+  name: vnotifymaintenance.kb.io
+  rules:
+  - apiGroups:
+    - ngn2.nvidia.com
+    apiVersions:
+    - v1alpha1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - notifymaintenances
+  sideEffects: None

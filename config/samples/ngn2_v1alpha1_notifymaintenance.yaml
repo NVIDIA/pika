@@ -1,0 +1,7 @@
+apiVersion: ngn2.nvidia.com/v1alpha1
+kind: NotifyMaintenance
+metadata:
+  name: notifymaintenance-test
+spec:
+  objects:
+    - "test-123"

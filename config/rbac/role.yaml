@@ -1,0 +1,49 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - nodes
+  verbs:
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - ngn2.nvidia.com
+  resources:
+  - notifymaintenances
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ngn2.nvidia.com
+  resources:
+  - notifymaintenances/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - ngn2.nvidia.com
+  resources:
+  - notifymaintenances/status
+  verbs:
+  - get
+  - patch
+  - update

@@ -1,0 +1,24 @@
+# permissions for end users to edit notifymaintenances.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: notifymaintenance-editor-role
+rules:
+- apiGroups:
+  - ngn2.nvidia.com
+  resources:
+  - notifymaintenances
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ngn2.nvidia.com
+  resources:
+  - notifymaintenances/status
+  verbs:
+  - get

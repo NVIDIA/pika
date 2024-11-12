@@ -1,6 +1,8 @@
 # PIKA and NotifyMaintenance
 Controller and API for coordinating Maintenance operations in Kubernetes.
 
+![Pika Logo](./doc/pika-logo.png)
+
 ## Our Approach
 How an End User drains workloads and conducts Maintenance is unique, however
 every Maintenance follows the same steps:

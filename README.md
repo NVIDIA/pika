@@ -20,7 +20,7 @@ We created the NotifyMaintenance API to track these common states.
 ## NotifyMaintenance API
 The NotifyMaintenance API is a Kubernetes CRD that proivdes a description
 of a Maintenance and the state of that Maintenance.  Using well-known states,
-controllers & operators can coordinate with on another to run complex drain
+controllers & operators can coordinate with one another to run complex drain
 and upgrade operations.
 
 
@@ -47,6 +47,7 @@ Admins should write operators to fulfill these roles. The operators
 will watch for NotifyMaintenance transitions then act on each state.
 
 2. NotifyMaintenance is designed to work with a "scheduler"
+
 Creating a NotifyMaintenance CR is not enough to start maintenance on a Node.
 Admins need to create an operator that tells PIKA to transition NotifyMaintenance
 CRs through each state based on the criteria for the state. For example, the

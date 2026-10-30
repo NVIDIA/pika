@@ -1,3 +1,13 @@
+***
+**NOTE**: This project is a reference architecture for building a Node lifecycle management solution.
+This architecture is proven to work in large scale production data centers at NVIDIA.
+
+If you want to follow the latest work in this space, several core Kubernetes improvements are being made
+to establish core APIs for node lifecycle management. Those changes would foster communities for projects
+like this by providing shared APIs or a plugin framework, so lifecycle management solutions can coordinate:
+- https://github.com/kubernetes/enhancements/issues/5683
+- https://github.com/kubernetes/community/blob/main/wg-node-lifecycle/README.md
+
 # PIKA and NotifyMaintenance
 Controller and API for coordinating Maintenance operations in Kubernetes.
 
